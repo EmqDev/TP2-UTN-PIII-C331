@@ -1,0 +1,115 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.65); 
+  background-blend-mode: multiply; 
+}
+
+
+header{
+  grid-column: span 2;
+  
+}
+
+.navbar{
+  background-color: rgba(0, 0, 0, .10);
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+section{
+  grid-column: span 2;
+  margin-top: 50px;
+  padding: 10px;
+  text-align: center; 
+}
+
+img{
+  width: 65%;  
+}
+
+.contenedor-productos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+
+.producto{
+  background-color: white;
+  color: black;
+  width: 30%;
+  margin-bottom: 20px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+button{
+  border-radius: 5px;
+}
+
+footer{
+
+  grid-column: span 2;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+  
+
+@media (max-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+
+  .contenedor-productos{
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+  }
+  
+  .producto{
+    width: 100%;
+    padding: 10px;
+  }
+
+  
+  img{
+  width: 60%;  
+  }
+
+}
+
+
+
+
+
+
