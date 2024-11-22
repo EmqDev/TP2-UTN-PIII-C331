@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 var blogRouter = require('./routes/blog');
 var contactoRouter = require('./routes/contacto');
 var singInRouter = require('./routes/signIn');
+var singUpRouter = require('./routes/signUp');
+
 
 
 
@@ -30,6 +32,8 @@ app.use('/users', usersRouter);
 app.use('/blog', blogRouter);
 app.use('/contacto', contactoRouter);
 app.use('/signIn', singInRouter);
+app.use('/signUp', singUpRouter);
+
 
 
 
