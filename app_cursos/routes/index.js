@@ -5,4 +5,6 @@ const curseControllers = require('../controllers/curseControllers')
 /* GET home page. */
 router.get('/',curseControllers.getCurse);
 
+
+
 module.exports = router;

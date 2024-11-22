@@ -34,7 +34,7 @@ const getCurse = (req, res)=>{
         }
     ]
 
-    res.render('index', {titulo:"FutureAIMentor",cursos});
+    res.render('index', {cursos});
 }
 
 module.exports = {getCurse};
