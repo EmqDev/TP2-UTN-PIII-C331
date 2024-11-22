@@ -52,6 +52,10 @@ img{
   width: 65%;  
 }
 
+li{
+  list-style: none;
+}
+
 .contenedor-productos{
   display: flex;
   flex-wrap: wrap;
@@ -68,6 +72,7 @@ img{
   margin-bottom: 20px;
   padding: 15px;
   text-align: center;
+  align-items: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   box-sizing: border-box;
 }
