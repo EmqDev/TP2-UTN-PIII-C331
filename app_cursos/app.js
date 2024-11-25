@@ -4,12 +4,17 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var bodyParser = require('body-parser');
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var blogRouter = require('./routes/blog');
 var contactoRouter = require('./routes/contacto');
 var singInRouter = require('./routes/signIn');
 var signUpRouter = require('./routes/signUp');
+var alumnoRouter = require('./routes/alumno');
+
 
 
 
@@ -26,6 +31,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/public', express.static(path.join(__dirname, "public")));
+app.use(bodyParser.json());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -33,6 +39,7 @@ app.use('/blog', blogRouter);
 app.use('/contacto', contactoRouter);
 app.use('/signIn', singInRouter);
 app.use('/signUp', signUpRouter);
+app.use('/alumnos', alumnoRouter); 
 
 
 
