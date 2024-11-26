@@ -1,10 +1,10 @@
 const { Sequelize } = require('sequelize');
 
 /* nombre de la db- user - contraseña - {donde esta alojada, lenguaje, puerto} */
-const db = new Sequelize ("cursos_db","root","1234",{
-    host : "localhost",
+const db = new Sequelize ("cursos_db","root","asd",{
+    host : "127.0.0.1",
     dialect:"mysql",
-    port: 3306
+    port: 33060
 })
 
 

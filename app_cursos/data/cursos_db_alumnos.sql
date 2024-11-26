@@ -1,10 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `cursos_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `cursos_db`;
--- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.36, for Linux (x86_64)
 --
 -- Host: 127.0.0.1    Database: cursos_db
 -- ------------------------------------------------------
--- Server version	8.0.39
+-- Server version	9.0.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -29,13 +27,12 @@ CREATE TABLE `alumnos` (
   `nombre` varchar(100) NOT NULL,
   `apellido` varchar(100) NOT NULL,
   `email` varchar(150) NOT NULL,
-  `telefono` varchar(20) DEFAULT NULL,
-  `fecha_registro` datetime DEFAULT CURRENT_TIMESTAMP,
+  `password` varchar(20) DEFAULT NULL,
   `createdAt` datetime DEFAULT NULL,
   `updatedAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id_alumno`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +41,7 @@ CREATE TABLE `alumnos` (
 
 LOCK TABLES `alumnos` WRITE;
 /*!40000 ALTER TABLE `alumnos` DISABLE KEYS */;
-INSERT INTO `alumnos` VALUES (1,'Juan','Pérez','juan.perez@example.com','123456789','2024-11-25 20:03:51',NULL,NULL),(2,'María','Gómez','maria.gomez@example.com','987654321','2024-11-25 20:03:51',NULL,NULL),(3,'Carlos','Lopez','carlos.lopez@example.com','456789123','2024-11-25 20:03:51',NULL,NULL),(6,'Jose','Prez','juan.pez@example.com','156456789','2024-11-25 23:28:48','2024-11-25 23:28:48','2024-11-25 23:28:48');
+INSERT INTO `alumnos` VALUES (7,'Juan','Pérez','juan.perez@example.com','password123','2024-11-26 01:01:10','2024-11-26 01:01:10'),(8,'Marcelo','Quiroz','asdasd@gmall.com','1234','2024-11-26 01:36:19','2024-11-26 01:36:19'),(9,'Marcelo','asd','asdasdasdasd@gmall.com','1234','2024-11-26 01:42:21','2024-11-26 01:42:21');
 /*!40000 ALTER TABLE `alumnos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-25 21:07:13
+-- Dump completed on 2024-11-25 22:44:16

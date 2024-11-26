@@ -19,12 +19,8 @@ const Alumno = db.define('alumnos', {
         allowNull: false,
         unique: true,
     },
-    telefono: {
+    password: {
         type: Sequelize.STRING,
-    },
-    fecha_registro: {
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.NOW,
     },
 
 });

@@ -30,9 +30,25 @@ exports.getAlumnoById = async (req, res) => {
 // Crear un nuevo alumno
 exports.createAlumno = async (req, res) => {
     try {
-        const { nombre, apellido, email, telefono } = req.body;
-        const nuevoAlumno = await Alumno.create({ nombre, apellido, email, telefono });
-        res.status(201).json(nuevoAlumno);
+        const { nombre, apellido, email, password } = req.body;
+
+        // Validar campos requeridos
+        if (!nombre || !apellido || !email) {
+            return res.status(400).send('Nombre, apellido y email son obligatorios.');
+        }
+
+        // Crear el nuevo alumno
+        const nuevoAlumno = await Alumno.create({
+            nombre,
+            apellido,
+            email,
+            password,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+        });
+
+        //res.status(201).json(nuevoAlumno);
+        res.redirect('/signIn');
     } catch (error) {
         console.error('Error al crear el alumno:', error);
         res.status(500).json({ error: 'Error al crear el alumno.' });
@@ -43,11 +59,11 @@ exports.createAlumno = async (req, res) => {
 exports.updateAlumno = async (req, res) => {
     try {
         const { id } = req.params;
-        const { nombre, apellido, email, telefono } = req.body;
+        const { nombre, apellido, email, password } = req.body;
         const alumno = await Alumno.findByPk(id);
 
         if (alumno) {
-            await alumno.update({ nombre, apellido, email, telefono });
+            await alumno.update({ nombre, apellido, email, tepasswordlefono });
             res.status(200).json(alumno);
         } else {
             res.status(404).json({ error: 'Alumno no encontrado.' });
