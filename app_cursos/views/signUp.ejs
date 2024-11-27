@@ -2,28 +2,29 @@
  
 <%- include('./template/header'); %>
 <main class="form-signin w-100 m-auto">
-  <div class="container mt-5">
-    <h1 class="text-center">Registrar Alumno</h1>
-    <form action="/alumnos" method="POST" class="mt-4">
-        <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" id="nombre" name="nombre" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="apellido" class="form-label">Apellido</label>
-            <input type="text" id="apellido" name="apellido" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" name="email" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" id="password" name="password" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-primary">Registrar</button>
-    </form>
-</div>
+    <div class="container mt-5">
+        <h1 class="h3 mb-3 fw-normal ">Registrar Alumno</h1>
+        
+        <form action="/alumnos" method="POST" class="mt-4">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" id="apellido" name="apellido" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" id="password" name="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
 
 </main>
 <%- include('./template/footer'); %>

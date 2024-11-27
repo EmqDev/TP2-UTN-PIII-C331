@@ -32,7 +32,7 @@ exports.createAlumno = async (req, res) => {
     try {
         const { nombre, apellido, email, password } = req.body;
 
-        // Validar campos requeridos
+        
         if (!nombre || !apellido || !email) {
             return res.status(400).send('Nombre, apellido y email son obligatorios.');
         }
@@ -47,10 +47,12 @@ exports.createAlumno = async (req, res) => {
             updatedAt: new Date(),
         });
 
-        //res.status(201).json(nuevoAlumno);
-        res.redirect('/signIn');
+        res.status(201).json(nuevoAlumno);
+        console.log("Alumno creado con exito")
+        res.render('signUp',{message:"Alumno creado con exito"})
     } catch (error) {
         console.error('Error al crear el alumno:', error);
+        
         res.status(500).json({ error: 'Error al crear el alumno.' });
     }
 };
@@ -63,7 +65,7 @@ exports.updateAlumno = async (req, res) => {
         const alumno = await Alumno.findByPk(id);
 
         if (alumno) {
-            await alumno.update({ nombre, apellido, email, tepasswordlefono });
+            await alumno.update({ nombre, apellido, email, password });
             res.status(200).json(alumno);
         } else {
             res.status(404).json({ error: 'Alumno no encontrado.' });
