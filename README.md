@@ -52,6 +52,17 @@ Instalar Dependencias Asegúrese de tener instalado Node.js en su máquina. Lueg
 
 ```
 **Para ejecutar la base de datos en la carpeta datos esta el script de mysql para crear las tablas** 
+```bash
+src/
+├── controllers/
+├── models/
+├── routes/
+├── data/
+|      └── cursos_db_alumnos.sql
+└── app.js
+```
+
+<br/>
 
 **Falta continuar**
 Configurar Variables de Entorno Cree un archivo .env en la raíz del proyecto y agregue las variables necesarias para la conexión con la base de datos MySQL. Por ejemplo:
