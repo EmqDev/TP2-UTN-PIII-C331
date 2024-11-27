@@ -38,43 +38,57 @@ Se valorará la organización del código, el uso de buenas prácticas y la impl
 
 Siga estos pasos para iniciar el proyecto localmente:
 
-1. **Clonar el Repositorio**
+**Clonar el Repositorio**
    ```bash
    git clone 
    cd app_cursos
+    ```
 Instalar Dependencias Asegúrese de tener instalado Node.js en su máquina. Luego ejecute:
 
-- npm install
+```bash
+ npm install
 
-Configurar Variables de Entorno Cree un archivo .env en la raíz del proyecto y agregue las variables necesarias para la conexión con la base de datos MySQL. Por ejemplo:(no logre implementarlo, necesitas ir a la carpeta data y ahi esta todo para levantar la base de datos)
+```
+**Para ejecutar la base de datos en la carpeta datos esta el script de mysql para crear las tablas** 
+
+**Falta continuar**
+Configurar Variables de Entorno Cree un archivo .env en la raíz del proyecto y agregue las variables necesarias para la conexión con la base de datos MySQL. Por ejemplo:
+
+```bash
 
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=password
 DB_NAME=nombre_basededatos
 
-Migraciones y Datos Iniciales Ejecute las migraciones para crear las tablas necesarias en la base de datos:
+```
 
-
-
+**Ejecutar el comando en la consola**
+```bash
 npm start
+```
 El servidor estará disponible en http://localhost:3000.
 
 <br/>
-Tecnologías Utilizadas
-Node.js: Entorno de ejecución para JavaScript.
-Express.js: Framework para construir aplicaciones web y APIs.
-MySQL: Base de datos relacional.
-Sequelize: ORM para trabajar con MySQL desde Node.js.
-Bootstrap: Framework CSS para el diseño de las vistas, si aplica.
+
+## Tecnologías Utilizadas
+
+- Node.js v.18.19.1: Entorno de ejecución para JavaScript.
+- Express.js: Framework para construir aplicaciones web y APIs.
+- MySQL: Base de datos relacional.
+- Sequelize: ORM para trabajar con MySQL desde Node.js.
+- Bootstrap: Framework CSS para el diseño de las vistas.
 <br/>
-Endpoints de la API
+
+## Endpoints de la API 
+
 A continuación, se detallan los endpoints principales disponibles:
 
-Modelo: Alumnos
-Crear un alumno
+***Modelo: Alumnos***
 
-POST /alumnos
+```bash
+Crear un alumno
+-POST /alumnos
 Body:
 {
   "nombre": "Juan",
@@ -82,43 +96,49 @@ Body:
   "mail": "juan.perez@mail.com",
   "contraseña": "123456"
 }
+
 Actualizar un alumno por ID
+-PUT /alumnos/:id
+  Body:
+  {
+    "nombre": "Juan Actualizado",
+    "apellido": "Pérez",
+    "mail": "juan.actualizado@mail.com"
+  }
 
-PUT /alumnos/:id
-Body:
-{
-  "nombre": "Juan Actualizado",
-  "apellido": "Pérez",
-  "mail": "juan.actualizado@mail.com"
-}
-Obtener todos los alumnos
+-Obtener todos los alumnos
+  GET /alumnos
 
-GET /alumnos
-Obtener un alumno por ID
+-Obtener un alumno por ID
+  GET /alumnos/:id
 
-GET /alumnos/:id
-Eliminar un alumno por ID
+-Eliminar un alumno por ID
+  DELETE /alumnos/:id
 
-DELETE /alumnos/:id
+```
+
 <br/>
-Estructura de Carpetas
-Organice el proyecto respetando esta estructura básica:
 
+**Estructura de Carpetas
+Organice el proyecto respetando esta estructura básica:**
+
+```bash
 src/
 ├── controllers/
 ├── models/
 ├── routes/
 ├── data/
 └── app.js
-<br/>
-Opcionales
-Query Params
+```
 
-Implementar paginado, ordenado y filtrado en las rutas de lectura, como:
-GET /alumnos?page=2&limit=5&sort=DESC&type=category1&status=active
-Relaciones
+<br/>
+
+## No llegue a terminar esta parte
 
 Crear una relación 1:N entre los modelos (por ejemplo, Autor y Alumnos).
+Aca queria crear tres modelos, aparte de alumno, profesor, curso y administrador. que cada alumno pueda inscribirse a las clases.
+
+--
 <br/>
 Entrega
 Subir el proyecto completo a un repositorio público en GitHub.
