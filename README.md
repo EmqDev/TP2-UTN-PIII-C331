@@ -64,8 +64,11 @@ DB_NAME=nombre_basededatos
 ```
 
 **Ejecutar el comando en la consola**
+
 ```bash
+
 npm start
+
 ```
 El servidor estará disponible en http://localhost:3000.
 
