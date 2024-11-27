@@ -39,13 +39,15 @@ Se valorará la organización del código, el uso de buenas prácticas y la impl
 Siga estos pasos para iniciar el proyecto localmente:
 
 **Clonar el Repositorio**
-   ```bash
+```bash
    git clone 
    cd app_cursos
-    ```
+```
+
 Instalar Dependencias Asegúrese de tener instalado Node.js en su máquina. Luego ejecute:
 
 ```bash
+
  npm install
 
 ```
