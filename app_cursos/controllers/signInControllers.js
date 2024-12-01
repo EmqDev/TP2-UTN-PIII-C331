@@ -1,5 +1,6 @@
+
 const getUser=(req,res)=>{
-    res.render('signIn')
+    res.render('signIn' )
 }
 
 module.exports = {getUser}
