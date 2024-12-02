@@ -47,13 +47,12 @@ exports.createAlumno = async (req, res) => {
             updatedAt: new Date(),
         });
 
-        res.status(201).json(nuevoAlumno);
-        //console.log("Alumno creado con exito")
-        res.render('signUp',{message:"Alumno creado con exito"})
+        //res.status(201).json(nuevoAlumno);
+        res.render('signIn')
     } catch (error) {
         console.error('Error al crear el alumno:', error);
         
-        res.status(500).json({ error: 'Error al crear el alumno.' });
+        res.status(500).render('error',{message:"Ocurrio un error al registrar el alumno", error:error});
     }
 };
 
